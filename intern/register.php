@@ -161,8 +161,8 @@ header('location:index.php');
                           </div>
                         </div>
                       </div>
-                     
                     </div>
+                    
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group row">
@@ -345,10 +345,25 @@ header('location:index.php');
                         </div>
                   </div>
                   </div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label">Designation</label>
+                          <div class="col-sm-5">
+                            <select name="gender" class="form-control" required>
+                              <option>Administrator</option>
+                              <option>User</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                  
+
                    <br><br>
-                    <center>
+                    <div class="row">
                     <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">REGISTER EMPLOYEE</button>
-                     </center>
+                  </div>
         </form>
                 </div>
               </div>
@@ -375,6 +390,7 @@ header('location:index.php');
       $pemail = $_POST['pemail'];
       $pnumber = $_POST['pnumber'];
       $presaddress = $_POST['presaddress'];
+      $designation = $_POST['designation'];
   $query= "INSERT INTO students(fname,gender,dob,nationality,number,email,resaddress,school,course,level,specialty,caretaker,fullname,pgender,pemail,pnumber,presaddress) values('$fname','$gender','$dob','$nationality','$number','$email','$resaddress','$school','$course','$level','$specialty','$caretaker','$fullname','$pgender','$pemail','$pnumber','$presaddress')";
                                         
  $query_run = mysqli_query($con, $query);         
