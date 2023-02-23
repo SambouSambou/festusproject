@@ -18,6 +18,8 @@ require_once "dbconfig/config.php";
   <link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/jquery.dataTables.css">
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/dataTables.bootstrap4.css">
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/responsive.dataTables.css">
+
+
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
@@ -54,7 +56,7 @@ require_once "dbconfig/config.php";
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
-              <span class="font-weight-bold mb-2"><?php echo $_SESSION['username'] ?> </span>
+              <span class="font-weight-bold mb-2"><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']?> </span>
                 <span class="font-weight-bold mb-2"><?php echo $_SESSION['email'] ?>   </span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -239,6 +241,7 @@ header('location:index.php');
                    <br><br>
                     <center>
                     <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">REGISTER EMPLOYEE</button>
+                
                   <center>
         </form>
                 </div>
@@ -256,19 +259,25 @@ header('location:index.php');
       $email = $_POST['email'];
       $specialty = $_POST['specialty'];
       $username = $firstname.".".$lastname;
+      
 
       try { 
         $query= "INSERT INTO users(username,firstname,lastname,designation,phonenumber,email,specialty) values('$username','$firstname','$lastname','$designation','$phonenumber','$email','$specialty')";
         $query_run = mysqli_query($con, $query);  
         
+        
                         
   if($query_run){
-    echo '<script type="text/javascript">alert("new user added successfully"); </script>';   
- 
+  echo '<div class="alert alert-success" role="alert">
+  New User Added successfully!
+</div>';
+         
+           
    }
 
   else{
     echo '<script type="text/javascript">alert("Error"); </script>';
+    
  
   }
 
@@ -276,7 +285,10 @@ header('location:index.php');
       }
       catch(Exception $e){
         $error = $e->getMessage();
-        echo '<script type="text/javascript">alert("' . $error . '")</script>';
+
+        echo '<div class="alert alert-danger" role="alert">
+        '. $error .'
+      </div>';
       }
       
  Finally{
@@ -310,6 +322,7 @@ header('location:index.php');
   <script src="js/misc.js"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
+    <script src="js/alerts.js"></script>
   <script src="js/dashboard.js"></script>
   <script src="src/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
 	<script src="src/plugins/datatables/media/js/dataTables.bootstrap4.js"></script>
