@@ -81,8 +81,14 @@ $num_rows = mysqli_num_rows($result);
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="adduser.php">
+              <span class="menu-title">Add New User</span>
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="register.php">
-              <span class="menu-title">Register Employees</span>
+              <span class="menu-title">Register New Student</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
           </li>

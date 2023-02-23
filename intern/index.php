@@ -7,11 +7,12 @@ session_start();
 
 if(isset($_POST['submit_btn'])){
 
-    $email =$_POST['email'];
+    $username = $_POST['username'];
+   // $email =$_POST['email'];
     $password = $_POST['password'];
 
 
-    $query="select * from interns WHERE InternEmail='$email' AND InternPassword='$password'";
+    $query="select * from users WHERE username='$username' AND initialpassword='$password'";
    
 
     $query_run = mysqli_query($con, $query);
@@ -22,18 +23,19 @@ if(isset($_POST['submit_btn'])){
         $row = mysqli_fetch_assoc($query_run);
                 // valid
                 //  $_SESSION['fullname']= $row['fullname'];
-                  $_SESSION['email']= $row['InternEmail'];
-                  $_SESSION['fullname'] = $row['fullname'];
-                  $_SESSION['internID'] = $row['internID'];
-                  $designation = $row['Designation'];
+                  $_SESSION['username']= $row['username'];
+                  $_SESSION['firstname'] = $row['firstname'];
+                  $_SESSION['lastname'] = $row['lastname'];
+                  $_SESSION['userID'] = $row['userID'];
+                  $designation = $row['designation'];
                   
 
                   if($designation = 'Administrator'){
-                    echo'<script type="text/javascript"> alert("Login Succesful!!") </script>';
+                    echo'<script type="text/javascript"> alert("New user added successfully") </script>';
                   header('location:home1.php');
                   }
 
-                 elseif($designation = 'Intern'){
+                 elseif($designation = 'User'){
                     echo'<script type="text/javascript"> alert("Login Succesful!!") </script>';
                  header('location:intern_portal.php');
                   }
@@ -85,7 +87,7 @@ if(isset($_POST['submit_btn'])){
               <h6 class="font-weight-light">Sign in to continue.</h6>
               <form class="pt-3" method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="email">
+                  <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username">
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password" name="password">

@@ -74,7 +74,7 @@ if(isset($_POST['login'])){
 
     else{
       //invalid
-      echo'<script type="text/javascript"> alert("Wrong Username Or Password") </script>';
+      //echo'<script type="text/javascript"> alert("Wrong Username Or Password") </script>';
     }
 
 }
