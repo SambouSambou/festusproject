@@ -26,6 +26,11 @@ require_once "dbconfig/config.php";
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 
+  <!-- Notifications -->
+  <link rel="stylesheet" href="css/alert.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
  
 </head>
 <body>
@@ -240,8 +245,9 @@ header('location:index.php');
 
                    <br><br>
                     <center>
-                    <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">REGISTER EMPLOYEE</button>
-                
+                    <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">ADD USER</button>
+                    <div class="buttons">
+    </div>
                   <center>
         </form>
                 </div>
@@ -268,9 +274,29 @@ header('location:index.php');
         
                         
   if($query_run){
-  echo '<div class="alert alert-success" role="alert">
-  New User Added successfully!
-</div>';
+  echo '<div class="alert hide">
+  <span class="fas fa-exclamation-circle"></span>
+  <span class="msg">Warning: This is a warning alert!</span>
+  <div class="close-btn">
+     <span class="fas fa-times"></span>
+  </div>
+</div>
+
+$("button").click(function(){
+  $(".alert").addClass("show");
+  $(".alert").removeClass("hide");
+  $(".alert").addClass("showAlert");
+  setTimeout(function(){
+    $(".alert").removeClass("show");
+    $(".alert").addClass("hide");
+  },5000);
+});
+$(".close-btn").click(function(){
+  $(".alert").removeClass("show");
+  $(".alert").addClass("hide");
+});
+
+';
          
            
    }

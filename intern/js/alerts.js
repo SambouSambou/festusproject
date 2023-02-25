@@ -1,27 +1,13 @@
-const triggers = [
-    'primary',
-    'secondary',
-    'success',
-    'danger',
-    'warning',
-    'info',
-    'light',
-    'dark',
-  ];
-  const basicInstances = [
-    'alert-primary',
-    'alert-secondary',
-    'alert-success',
-    'alert-danger',
-    'alert-warning',
-    'alert-info',
-    'alert-light',
-    'alert-dark',
-  ];
-  
-  triggers.forEach((trigger, index) => {
-    let basicInstance = mdb.Alert.getInstance(document.getElementById(basicInstances[index]));
-    document.getElementById(trigger).addEventListener('click', () => {
-      basicInstance.show();
-    });
-  });
+$('button').click(function(){
+  $('.alert').addClass("show");
+  $('.alert').removeClass("hide");
+  $('.alert').addClass("showAlert");
+  setTimeout(function(){
+    $('.alert').removeClass("show");
+    $('.alert').addClass("hide");
+  },5000);
+});
+$('.close-btn').click(function(){
+  $('.alert').removeClass("show");
+  $('.alert').addClass("hide");
+});

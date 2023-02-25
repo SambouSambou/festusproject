@@ -24,6 +24,8 @@ require_once "dbconfig/config.php";
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 
+  
+
  
 </head>
 <body>
@@ -408,6 +410,7 @@ header('location:index.php');
 
         if($query_run){
           echo '<script type="text/javascript">alert("New Student Added Successfully"); </script>';   
+
        
          }
       
