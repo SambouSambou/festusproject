@@ -274,29 +274,7 @@ header('location:index.php');
         
                         
   if($query_run){
-  echo '<div class="alert hide">
-  <span class="fas fa-exclamation-circle"></span>
-  <span class="msg">Warning: This is a warning alert!</span>
-  <div class="close-btn">
-     <span class="fas fa-times"></span>
-  </div>
-</div>
-
-$("button").click(function(){
-  $(".alert").addClass("show");
-  $(".alert").removeClass("hide");
-  $(".alert").addClass("showAlert");
-  setTimeout(function(){
-    $(".alert").removeClass("show");
-    $(".alert").addClass("hide");
-  },5000);
-});
-$(".close-btn").click(function(){
-  $(".alert").removeClass("show");
-  $(".alert").addClass("hide");
-});
-
-';
+  echo '<script type="text/javascript">alert("User added successfully"); </script> ';
          
            
    }
