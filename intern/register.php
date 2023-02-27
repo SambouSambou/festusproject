@@ -80,15 +80,19 @@ require_once "dbconfig/config.php";
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="view_app.php" >
 
-            
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">
+              <span class="menu-title">Register Employees</span>
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"  href="view_app.php" >          
               <span class="menu-title">View Employees</span>
-            
               <i class="mdi mdi-account-multiple-plus menu-icon"></i>
             </a>
-           
           </li>
           
           <li class="nav-item">

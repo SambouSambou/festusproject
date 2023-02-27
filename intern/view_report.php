@@ -53,8 +53,8 @@ require_once "dbconfig/config.php";
                 <span class="login-status online"></span> <!--change to offline or busy as needed-->              
               </div>
               <div class="nav-profile-text d-flex flex-column">
-              <span class="font-weight-bold mb-2">                  <?php echo $_SESSION['username'] ?> </span>
-                <span class="font-weight-bold mb-2">                  <?php echo $_SESSION['email'] ?>   </span>
+              <span class="font-weight-bold mb-2"><?php echo $_SESSION['firstname']." ".$_SESSION['lastname']?> </span>
+                <span class="font-weight-bold mb-2"><?php echo $_SESSION['email'] ?>   </span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -66,22 +66,31 @@ require_once "dbconfig/config.php";
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="adduser.php">
+              <span class="menu-title">Add New User</span>
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.php">
+              <span class="menu-title">Register New Student</span>
+              <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+          </li>
+        
+          <li class="nav-item">
             <a class="nav-link" href="register.php">
               <span class="menu-title">Register Employees</span>
               <i class="mdi mdi-format-list-bulleted menu-icon"></i>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link"  href="view_app.php" >
 
-            
-              <span class="menu-title">View Employees</span>
-            
+          <li class="nav-item">
+            <a class="nav-link"  href="view_app.php" >           
+              <span class="menu-title">View Employees</span>          
               <i class="mdi mdi-account-multiple-plus menu-icon"></i>
-            </a>
-           
-          </li>
-          
+            </a>          
+          </li>         
           <li class="nav-item">
             <a class="nav-link" href="view_report.php">
               <span class="menu-title">View Reports</span>
