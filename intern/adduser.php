@@ -18,19 +18,13 @@ require_once "dbconfig/config.php";
   <link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/jquery.dataTables.css">
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/dataTables.bootstrap4.css">
 	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/media/css/responsive.dataTables.css">
-
-
   <!-- endinject -->
   <!-- inject:css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
 
-  <!-- Notifications -->
-  <link rel="stylesheet" href="css/alert.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-      <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-
+  
  
 </head>
 <body>
