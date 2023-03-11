@@ -48,7 +48,7 @@
               </div>
               <div class="nav-profile-text d-flex flex-column">
                 <span class="font-weight-bold mb-2">                  <?php echo $_SESSION['firstname']." ".$_SESSION['lastname']?> </span>
-                <span class="font-weight-bold mb-2">                  <?php echo $_SESSION['email'] ?>   </span>
+                <span class="font-weight-bold mb-2">                  <?php echo $_SESSION['designation'] ?>   </span>
               </div>
               <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
             </a>
@@ -365,7 +365,7 @@ $num_rows = mysqli_num_rows($result);
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2019</a>VOLTA RIVER AUTHORITY </span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 </a>Purple Systems, Inc. <a href="#"span>
           </div>
         </footer>
         <!-- partial -->

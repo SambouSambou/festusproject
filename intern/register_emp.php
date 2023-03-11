@@ -373,7 +373,7 @@ header('location:index.php');
 
                    <br><br>
                     <div class="row">
-                    <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">REGISTER Employee</button>
+                    <button type="submit" class="btn  btn-gradient-primary btn-lg font-weight-medium auth-form-btn" name="submit_btn">REGISTER EMPLOYEE</button>
                   </div>
         </form>
                 </div>

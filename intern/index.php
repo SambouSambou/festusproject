@@ -28,11 +28,12 @@ if(isset($_POST['submit_btn'])){
                   $_SESSION['lastname'] = $row['lastname'];
                   $_SESSION['userID'] = $row['userID'];
                   $_SESSION['email'] = $row['email'];
+                  $_SESSION['designation'] = $row['designation'];
                   $designation = $row['designation'];
                   
 
                   if($designation = 'Administrator'){
-                    echo'<script type="text/javascript"> alert("New user added successfully") </script>';
+                    echo'<script type="text/javascript"> alert("Login Successful") </script>';
                   header('location:home1.php');
                   }
 
